@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rohith Vemprala | Portfolio</title>
+  <meta name="description" content="Rohith Vemprala - Data Analyst & Software Engineering Student. Power BI, Python, SQL, MS Excel expert based in Chittoor, India."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-ring"></div>
+    <div class="loader-ring"></div>
+    <div class="loader-ring"></div>
+    <p class="loader-text">Loading...</p>
+  </div>
+</div>
+
+<!-- 3D Canvas Background -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- Navigation -->
+<nav id="navbar">
+  <div class="nav-logo">RV<span class="dot">.</span></div>
+  <ul class="nav-links">
+    <li><a href="#home" id="nav-home">Home</a></li>
+    <li><a href="#about" id="nav-about">About</a></li>
+    <li><a href="#skills" id="nav-skills">Skills</a></li>
+    <li><a href="#experience" id="nav-experience">Experience</a></li>
+    <li><a href="#projects" id="nav-projects">Projects</a></li>
+    <li><a href="#certifications" id="nav-certifications">Certs</a></li>
+    <li><a href="#contact" id="nav-contact">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="#home" class="mobile-link">Home</a></li>
+    <li><a href="#about" class="mobile-link">About</a></li>
+    <li><a href="#skills" class="mobile-link">Skills</a></li>
+    <li><a href="#experience" class="mobile-link">Experience</a></li>
+    <li><a href="#projects" class="mobile-link">Projects</a></li>
+    <li><a href="#certifications" class="mobile-link">Certifications</a></li>
+    <li><a href="#contact" class="mobile-link">Contact</a></li>
+  </ul>
+</div>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Available for opportunities
+    </div>
+    <h1 class="hero-name">
+      <span class="name-line">Rohith</span>
+      <span class="name-line accent">Vemprala</span>
+    </h1>
+    <p class="hero-title" id="typed-title"></p>
+    <p class="hero-subtitle">B.Tech Computer Science @ Mohan Babu University<br/>Chittoor, Andhra Pradesh, India</p>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn btn-primary">View My Work</a>
+      <a href="#contact" class="btn btn-outline">Get In Touch</a>
+    </div>
+    <div class="hero-socials">
+      <a href="https://www.linkedin.com/in/rohith4467" target="_blank" class="social-link" title="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="mailto:rohithnaidu4467@gmail.com" class="social-link" title="Email">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="hero-3d-wrapper">
+    <div class="floating-card card-1">
+      <div class="card-icon">📊</div>
+      <div class="card-label">Power BI</div>
+    </div>
+    <div class="floating-card card-2">
+      <div class="card-icon">🐍</div>
+      <div class="card-label">Python</div>
+    </div>
+    <div class="floating-card card-3">
+      <div class="card-icon">🗄️</div>
+      <div class="card-label">SQL</div>
+    </div>
+    <div class="floating-card card-4">
+      <div class="card-icon">📈</div>
+      <div class="card-label">Data Analytics</div>
+    </div>
+    <div class="avatar-sphere">
+      <div class="sphere-inner">
+        <img src="rohith.jpg" alt="Rohith Vemprala" class="sphere-photo" onerror="this.style.display='none';this.parentElement.innerHTML='<span style=font-size:56px;font-weight:900;color:white;font-family:sans-serif>RV</span>'"/>
+      </div>
+      <div class="sphere-orbit orbit-1"><div class="orbit-dot"></div></div>
+      <div class="sphere-orbit orbit-2"><div class="orbit-dot"></div></div>
+      <div class="sphere-orbit orbit-3"><div class="orbit-dot"></div></div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="scroll-mouse">
+      <div class="scroll-wheel"></div>
+    </div>
+    <span>Scroll Down</span>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Who I Am</span>
+      <h2 class="section-title">About <span class="accent">Me</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-card-3d">
+          <div class="about-avatar">
+            <div class="avatar-ring ring-1"></div>
+            <div class="avatar-ring ring-2"></div>
+            <div class="avatar-blob">
+              <img src="rohith.jpg" alt="Rohith Vemprala" class="avatar-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+              <span style="display:none">RV</span>
+            </div>
+          </div>
+          <div class="stat-chips">
+            <div class="chip">
+              <span class="chip-num">500+</span>
+              <span class="chip-label">Connections</span>
+            </div>
+            <div class="chip">
+              <span class="chip-num">678</span>
+              <span class="chip-label">Followers</span>
+            </div>
+            <div class="chip">
+              <span class="chip-num">5+</span>
+              <span class="chip-label">Certifications</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-content">
+        <p class="about-bio">
+          I'm a <strong>B.Tech Computer Science Engineering</strong> student at Mohan Babu University, passionate about transforming raw data into meaningful business insights. I specialize in <strong>Data Analysis</strong> with expertise in Power BI, Python, SQL, and MS Excel.
+        </p>
+        <p class="about-bio">
+          Currently gaining hands-on experience as a <strong>Software Engineer Intern</strong> at Ogdynex Private Limited, where I work with Node.js and MySQL to build robust solutions.
+        </p>
+        <div class="about-details">
+          <div class="detail-item">
+            <div class="detail-icon">📍</div>
+            <div>
+              <span class="detail-label">Location</span>
+              <span class="detail-value">Chittoor, Andhra Pradesh, India</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">🎓</div>
+            <div>
+              <span class="detail-label">Degree</span>
+              <span class="detail-value">B.Tech CSE (2022 – 2026)</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">💼</div>
+            <div>
+              <span class="detail-label">Status</span>
+              <span class="detail-value">Software Engineer Intern @ Ogdynex</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">📧</div>
+            <div>
+              <span class="detail-label">Email</span>
+              <span class="detail-value">rohithnaidu4467@gmail.com</span>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.linkedin.com/in/rohith4467" target="_blank" class="btn btn-primary">View LinkedIn Profile</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">What I Know</span>
+      <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
+    </div>
+    <div class="skills-universe">
+      <div class="skills-category">
+        <h3 class="skills-cat-title">Data & Analytics</h3>
+        <div class="skills-grid">
+          <div class="skill-card" data-level="90">
+            <div class="skill-icon">📊</div>
+            <div class="skill-info">
+              <div class="skill-name-row"><span class="skill-name">Power BI</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
+            </div>
+          </div>
+          <div class="skill-card" data-level="88">
+            <div class="skill-icon">📈</div>
+            <div class="skill-info">
+              <div class="skill-name-row"><span class="skill-name">MS Excel</span><span class="skill-pct">88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+            </div>
+          </div>
+          <div class="skill-card" data-level="82">
+            <div class="skill-icon">🔍</div>
+            <div class="skill-info">
+              <div class="skill-name-row"><span class="skill-name">Data Analysis</span><span class="skill-pct">82%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div>
+            </div>
+          </div>
+          <div class="skill-card" data-level="80">
+            <div class="skill-icon">📉</div>
+            <div class="skill-info">
+              <div class="skill-name-row"><span class="skill-name">Data Visualization</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skills-category">
+        <h3 class="skills-cat-title">Programming</h3>
+        <div class="skills-grid">
+          <div class="skill-card" data-level="85">
+            <div class="skill-icon">🐍</div>
+            <div class="skill-info">
+              <div class="skill-name-row"><span class="skill-name">Python</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+            </div>
+          </div>
+          <div class="skill-card" data-level="83">
+            <div class="skill-icon">🗄️</div>
+            <div class="skill-info">
+              <div class="skill-name-row"><span class="skill-name">SQL / MySQL</span><span class="skill-pct">83%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--w:83%"></div></div>
+            </div>
+          </div>
+          <div class="skill-card" data-level="75">
+            <div class="skill-icon">🟩</div>
+            <div class="skill-info">
+              <div class="skill-name-row"><span class="skill-name">Node.js</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div>
+            </div>
+          </div>
+          <div class="skill-card" data-level="72">
+            <div class="skill-icon">🌐</div>
+            <div class="skill-info">
+              <div class="skill-name-row"><span class="skill-name">JavaScript / HTML</span><span class="skill-pct">72%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--w:72%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skills-category">
+        <h3 class="skills-cat-title">Mathematics & Others</h3>
+        <div class="skills-grid">
+          <div class="skill-card" data-level="80">
+            <div class="skill-icon">📐</div>
+            <div class="skill-info">
+              <div class="skill-name-row"><span class="skill-name">Statistics</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+            </div>
+          </div>
+          <div class="skill-card" data-level="78">
+            <div class="skill-icon">🎲</div>
+            <div class="skill-info">
+              <div class="skill-name-row"><span class="skill-name">Probability</span><span class="skill-pct">78%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
+            </div>
+          </div>
+          <div class="skill-card" data-level="85">
+            <div class="skill-icon">🧹</div>
+            <div class="skill-info">
+              <div class="skill-name-row"><span class="skill-name">Data Cleaning</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+            </div>
+          </div>
+          <div class="skill-card" data-level="88">
+            <div class="skill-icon">💬</div>
+            <div class="skill-info">
+              <div class="skill-name-row"><span class="skill-name">Communication</span><span class="skill-pct">88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Tech Pills -->
+    <div class="tech-pills">
+      <span class="pill">Power BI</span>
+      <span class="pill">Python</span>
+      <span class="pill">MySQL</span>
+      <span class="pill">MS Excel</span>
+      <span class="pill">Node.js</span>
+      <span class="pill">JavaScript</span>
+      <span class="pill">Data Analysis</span>
+      <span class="pill">Statistics</span>
+      <span class="pill">HTML</span>
+      <span class="pill">Leadership</span>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">My Journey</span>
+      <h2 class="section-title">Experience & <span class="accent">Education</span></h2>
+    </div>
+    <div class="timeline">
+      <!-- Experience -->
+      <div class="timeline-item left" data-anim="left">
+        <div class="timeline-dot exp-dot"></div>
+        <div class="timeline-card">
+          <div class="tc-header">
+            <div class="tc-icon">💼</div>
+            <div>
+              <span class="tc-tag">Work Experience</span>
+              <h3 class="tc-title">Software Engineer Intern</h3>
+            </div>
+          </div>
+          <p class="tc-company">Ogdynex Private Limited</p>
+          <p class="tc-date">📅 December 2025 – Present (4 months) · On-site</p>
+          <p class="tc-desc">Working on backend development using Node.js and MySQL. Gaining hands-on experience building scalable software systems in a professional environment.</p>
+          <div class="tc-skills">
+            <span class="tc-skill">Node.js</span>
+            <span class="tc-skill">MySQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education 1 -->
+      <div class="timeline-item right" data-anim="right">
+        <div class="timeline-dot edu-dot"></div>
+        <div class="timeline-card">
+          <div class="tc-header">
+            <div class="tc-icon">🎓</div>
+            <div>
+              <span class="tc-tag">Education</span>
+              <h3 class="tc-title">B.Tech Computer Science Engineering</h3>
+            </div>
+          </div>
+          <p class="tc-company">Mohan Babu University</p>
+          <p class="tc-date">📅 August 2022 – April 2026</p>
+          <p class="tc-desc">Pursuing Bachelor of Technology in Computer Science with a focus on data science, programming, and software engineering principles.</p>
+          <div class="tc-skills">
+            <span class="tc-skill">Python</span>
+            <span class="tc-skill">MySQL</span>
+            <span class="tc-skill">Data Science</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education 2 -->
+      <div class="timeline-item left" data-anim="left">
+        <div class="timeline-dot edu-dot"></div>
+        <div class="timeline-card">
+          <div class="tc-header">
+            <div class="tc-icon">📚</div>
+            <div>
+              <span class="tc-tag">Education</span>
+              <h3 class="tc-title">Intermediate – MPC</h3>
+            </div>
+          </div>
+          <p class="tc-company">Sri Vivekananda Junior College</p>
+          <p class="tc-date">📅 August 2020 – May 2022</p>
+          <p class="tc-desc">Completed Intermediate with Mathematics, Physics, and Chemistry as core subjects, building a strong analytical foundation.</p>
+          <div class="tc-skills">
+            <span class="tc-skill">Mathematics</span>
+            <span class="tc-skill">Physics</span>
+            <span class="tc-skill">Chemistry</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">What I've Built</span>
+      <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card featured">
+        <div class="project-glow"></div>
+        <div class="project-header">
+          <div class="project-icon-wrap">📊</div>
+          <span class="project-year">June 2024</span>
+        </div>
+        <h3 class="project-title">ROHITH ECOMMERCE SALES DASHBOARD</h3>
+        <p class="project-desc">
+          A comprehensive sales analytics dashboard built with Power BI to visualize key performance indicators and business metrics at a glance.
+        </p>
+        <div class="project-kpis">
+          <div class="kpi-card">
+            <span class="kpi-value">438K</span>
+            <span class="kpi-label">Total Sales</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-value">37K</span>
+            <span class="kpi-label">Total Profit</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-value">5,615</span>
+            <span class="kpi-label">Total Qty</span>
+          </div>
+        </div>
+        <p class="project-detail">
+          🔹 Utilized Orders.csv & Details.csv datasets<br/>
+          🔹 Visualizations: Sales by Customer, Quantity by Category, Monthly Profit Trends<br/>
+          🔹 Interactive filters and drill-down capabilities
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Power BI</span>
+          <span class="tech-tag">Data Visualization</span>
+          <span class="tech-tag">KPI Dashboards</span>
+          <span class="tech-tag">CSV Analysis</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Credentials</span>
+      <h2 class="section-title">Licenses & <span class="accent">Certifications</span></h2>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-logo">📜</div>
+        <div class="cert-info">
+          <h3 class="cert-name">Probability & Statistics for ML & Data Science</h3>
+          <p class="cert-issuer">Coursera</p>
+          <p class="cert-date">April 2024</p>
+        </div>
+        <div class="cert-badge">✓ Verified</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-logo">📊</div>
+        <div class="cert-info">
+          <h3 class="cert-name">Basic Statistics</h3>
+          <p class="cert-issuer">Coursera</p>
+          <p class="cert-date">March 2024</p>
+        </div>
+        <div class="cert-badge">✓ Verified</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-logo">🏆</div>
+        <div class="cert-info">
+          <h3 class="cert-name">Pearson Mepro Level 10 Expert</h3>
+          <p class="cert-issuer">Pearson</p>
+          <p class="cert-date">January 2024</p>
+        </div>
+        <div class="cert-badge">✓ Verified</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-logo">🖥️</div>
+        <div class="cert-info">
+          <h3 class="cert-name">Introduction to Computer & Operating Systems Security</h3>
+          <p class="cert-issuer">Coursera</p>
+          <p class="cert-date">October 2023</p>
+        </div>
+        <div class="cert-badge">✓ Verified</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-logo">🌟</div>
+        <div class="cert-info">
+          <h3 class="cert-name">Ethical Leadership Through Giving Voice to Values</h3>
+          <p class="cert-issuer">Coursera</p>
+          <p class="cert-date">October 2023</p>
+        </div>
+        <div class="cert-badge">✓ Verified</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Let's Connect</span>
+      <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <p class="contact-tagline">I'm currently open to new opportunities and collaborations. Whether you have a question, a project idea, or just want to say hi — my inbox is always open!</p>
+        <div class="contact-cards">
+          <a href="mailto:rohithnaidu4467@gmail.com" class="contact-card">
+            <div class="cc-icon">📧</div>
+            <div class="cc-text">
+              <span class="cc-label">Email</span>
+              <span class="cc-value">rohithnaidu4467@gmail.com</span>
+            </div>
+          </a>
+          <a href="tel:+916302369631" class="contact-card">
+            <div class="cc-icon">📱</div>
+            <div class="cc-text">
+              <span class="cc-label">Phone</span>
+              <span class="cc-value">+91 6302369631</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/rohith4467" target="_blank" class="contact-card">
+            <div class="cc-icon">💼</div>
+            <div class="cc-text">
+              <span class="cc-label">LinkedIn</span>
+              <span class="cc-value">linkedin.com/in/rohith4467</span>
+            </div>
+          </a>
+          <div class="contact-card">
+            <div class="cc-icon">📍</div>
+            <div class="cc-text">
+              <span class="cc-label">Location</span>
+              <span class="cc-value">Chittoor, Andhra Pradesh, India 517001</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <input id="form-name" type="text" placeholder="Your Name" required class="form-input"/>
+          <label class="form-label">Your Name</label>
+        </div>
+        <div class="form-group">
+          <input id="form-email" type="email" placeholder="Your Email" required class="form-input"/>
+          <label class="form-label">Your Email</label>
+        </div>
+        <div class="form-group">
+          <input id="form-subject" type="text" placeholder="Subject" required class="form-input"/>
+          <label class="form-label">Subject</label>
+        </div>
+        <div class="form-group">
+          <textarea id="form-message" placeholder="Your Message" required class="form-input form-textarea" rows="5"></textarea>
+          <label class="form-label">Your Message</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+          <span>Send Message</span>
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9L22 2"/></svg>
+        </button>
+        <p id="form-success" class="form-success" style="display:none">✅ Message sent! I'll get back to you soon.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">RV<span class="dot">.</span></div>
+    <p class="footer-copy">© 2024 Rohith Vemprala. Crafted with ❤️ and lots of data.</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/rohith4467" target="_blank">LinkedIn</a>
+      <a href="mailto:rohithnaidu4467@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
